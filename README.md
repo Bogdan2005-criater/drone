@@ -1,7 +1,3 @@
-Вот пример README файла для проекта на GitHub:
-
----
-
 # Drone Harvesting System
 
 This project is a simulation of an **agricultural drone management system** based on the classic "Snake" game mechanics. The drones are responsible for harvesting pumpkins from the field, and the program supports both **manual control** and **autopilot** modes.
@@ -76,23 +72,6 @@ Upon running, you will be prompted to select a mode:
 - **Autopilot Mode**: The drone will automatically move towards the nearest pumpkin and collect it.
 - **Manual Mode**: Use the arrow keys (`UP`, `DOWN`, `LEFT`, `RIGHT`) to control the drone's movement.
 - **Quit Game**: Press `'q'` at any time to quit the game.
-
-## Screenshots
-
-### Initial Screen
-The initial screen will prompt you to choose a mode:
-
-![Initial screen](link-to-image)
-
-### Autopilot Mode
-In autopilot mode, drones automatically move and collect pumpkins:
-
-![Autopilot mode](link-to-image)
-
-### Manual Mode
-In manual mode, the user controls the drones with the arrow keys:
-
-![Manual mode](link-to-image)
 
 ## Build Process
 
