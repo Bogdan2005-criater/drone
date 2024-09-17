@@ -1,100 +1,108 @@
-# Drone Harvesting System
+# Система управления сельскохозяйственными дронами
 
-This project is a simulation of an **agricultural drone management system** based on the classic "Snake" game mechanics. The drones are responsible for harvesting pumpkins from the field, and the program supports both **manual control** and **autopilot** modes.
+Этот проект представляет собой симуляцию **системы управления сельскохозяйственными дронами** на основе механики классической игры "Змейка". Дроны отвечают за сбор тыкв с поля. Программа поддерживает как **ручное управление**, так и **автопилот**, где дроны самостоятельно находят и собирают тыквы.
 
-## Table of Contents
-- [Project Description](#project-description)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Controls](#controls)
-- [Screenshots](#screenshots)
-- [Build Process](#build-process)
-- [Contributing](#contributing)
-- [License](#license)
+## Содержание
+- [Описание проекта](#описание-проекта)
+- [Функции](#функции)
+- [Установка](#установка)
+- [Использование](#использование)
+- [Управление](#управление)
+- [Сборка программы](#сборка-программы)
+- [Участие в проекте](#участие-в-проекте)
+- [Лицензия](#лицензия)
 
-## Project Description
-This project simulates a system where drones move across a field to collect pumpkins. The player can control the drones manually or allow them to operate in autopilot mode, where they automatically find and collect the nearest pumpkins. The game is built using the **C programming language** and the **ncurses** library for terminal-based graphics.
+## Описание проекта
+Проект симулирует работу системы, в которой дроны перемещаются по полю и собирают тыквы. Пользователь может управлять дронами вручную или дать им команду работать в режиме автопилота, где они самостоятельно находят ближайшие тыквы и собирают их. Игра реализована на языке программирования **C** с использованием библиотеки **ncurses** для отображения графики в терминале.
 
-## Features
-- Manual and autopilot modes for drone control.
-- Multiple drones collecting pumpkins in parallel (up to 5).
-- Autopilot uses a simple nearest-pumpkin algorithm for efficient harvesting.
-- Visual representation of drones and pumpkins in the terminal using the ncurses library.
-- Real-time gameplay with collision detection and object interaction.
+## Функции
+- Поддержка ручного и автоматического режимов управления дронами.
+- Возможность одновременной работы нескольких дронов (до 5).
+- Автопилот использует алгоритм поиска ближайшей тыквы для эффективного сбора урожая.
+- Графическое отображение дронов и тыкв в терминальном интерфейсе с помощью библиотеки ncurses.
+- Реальное время игры с обработкой столкновений и взаимодействием объектов.
 
-## Installation
-To run this project, you need to have the `gcc` compiler and the `ncurses` library installed on your system. Use the following commands to install them on Ubuntu:
+## Установка
+Для запуска этого проекта вам нужно иметь установленный компилятор `gcc` и библиотеку `ncurses`. Используйте следующие команды для установки на Ubuntu:
 
 ```bash
 sudo apt-get update
 sudo apt-get install gcc libncurses5-dev libncursesw5-dev
 ```
 
-### Clone the Repository
-Clone the project repository to your local machine:
+### Клонирование репозитория
+Клонируйте проект на свой компьютер:
 
 ```bash
 git clone https://github.com/your-username/drone-harvesting-system.git
 cd drone-harvesting-system
 ```
 
-## Usage
+## Использование
 
-### Compiling the Program
+### Компиляция программы
 
-You can compile the program using the provided `Makefile`:
+Вы можете скомпилировать программу с помощью предоставленного `Makefile`:
 
 ```bash
 make
 ```
 
-Alternatively, you can use the `run.sh` script to compile and run the program:
+Также вы можете использовать скрипт `run.sh` для компиляции и запуска программы:
+
+```bash
+chmod +x run.sh
+```
 
 ```bash
 ./run.sh
 ```
 
-### Running the Program
-After compiling, you can run the program by executing the `main` file:
+### Запуск программы
+После компиляции запустите программу, выполнив команду:
 
 ```bash
 ./main
 ```
 
-Upon running, you will be prompted to select a mode:
-- Press `'a'` to select autopilot mode.
-- Press `'m'` to select manual control mode.
-- Press `'q'` to quit the game.
+После запуска программы появится приглашение выбрать режим:
+- Нажмите `'a'` для выбора режима автопилота.
+- Нажмите `'m'` для выбора ручного управления.
+- Нажмите `'q'` для выхода из игры.
 
-## Controls
+## Управление
 
-- **Autopilot Mode**: The drone will automatically move towards the nearest pumpkin and collect it.
-- **Manual Mode**: Use the arrow keys (`UP`, `DOWN`, `LEFT`, `RIGHT`) to control the drone's movement.
-- **Quit Game**: Press `'q'` at any time to quit the game.
+- **Режим автопилота**: дрон автоматически перемещается к ближайшей тыкве и собирает её.
+- **Ручной режим**: используйте клавиши стрелок (`Вверх`, `Вниз`, `Влево`, `Вправо`) для управления движением дрона.
+- **Выход из игры**: нажмите `'q'` в любое время для завершения игры.
 
-## Build Process
 
-This project uses the `Makefile` for building. Simply run the following command to compile the project:
+## Сборка программы
+
+Программа собирается с использованием утилиты `make`. Чтобы собрать проект, выполните команду:
 
 ```bash
 make
 ```
 
-To clean up the build files:
+Для очистки файлов сборки:
 
 ```bash
 make clean
 ```
 
-You can also use the `run.sh` script for a combined compile-and-run process:
+Также вы можете использовать скрипт `run.sh`, чтобы скомпилировать и запустить программу:
 
 ```bash
 ./run.sh
 ```
 
-## Contributing
-Feel free to fork this repository, make improvements, and submit pull requests. Any contributions that improve functionality, fix bugs, or enhance documentation are welcome.
+## Участие в проекте
+Вы можете форкнуть этот репозиторий, вносить улучшения и отправлять пул-реквесты. Любые предложения по улучшению функциональности, исправлению ошибок или улучшению документации приветствуются.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+## Лицензия
+Этот проект распространяется под лицензией MIT. Подробности можно найти в файле `LICENSE`.
+
+---
+
+Можете дополнительно указать ссылки на скриншоты и репозиторий, когда загрузите проект на GitHub.
